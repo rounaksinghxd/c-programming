@@ -32,7 +32,7 @@ Specifier               Data Type                        Example
 %p                      Pointers (Memory Address)        0x7ffee                         
 
 > Why Format Specifers are Important?
-Computers store everything as binary ($0$s and $1$s).
+Computers store everything as binary (0 and 1).
 Without a format specifier, the computer wouldn't know if a specific chunk of memory represents the number 65,
 the character 'A', or a very small decimal. The specifier acts as a translator.
 
