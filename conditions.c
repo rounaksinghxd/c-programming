@@ -9,6 +9,9 @@ The simplest form of branching. The code inside the braces runs only if the cond
 2. The if-else Statement
 This provides an "Option B." If the if condition fails, the else block runs.
 
+3. The else if Ladder
+When you have multiple specific conditions to check, you use a ladder. 
+The program checks them one by one and stops at the first true one.
 */
 // Example of If statement:
 #include<stdio.h>
@@ -18,11 +21,17 @@ int main()
   printf("Enter your score: ");
   scanf("%d", &score);
   
-  if (score > 50) {
-    printf("You passed!");
+  // Example of If-statement:
+  if (score >= 90) {
+    printf("You Recieved A Grade.");
 }
-//Example of If-else statement:
-  else {
+  // Example of else if statement:
+  else if (score>=40) {
+    printf("You Passed.");
+}
+
+// Example of If-else statement:
+  else (score<=39) {
     printf("Failed");
 }
   return 0;
