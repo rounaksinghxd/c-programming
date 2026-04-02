@@ -17,28 +17,30 @@ Accessing: matrix[row][column]
 #include <stdio.h>
 
 int main() {
-    // 1. Declare a 2D array (3 rows, 3 columns)
-    int matrix[3][3];
-    int i, j;
+    // [2 Classes] [3 Students] [2 Subjects]
+    int school[2][3][2] = {
+        { // Class 1
+            {85, 90}, {78, 82}, {92, 88}
+        },
+        { // Class 2
+            {70, 75}, {88, 84}, {95, 91}
+        }
+    };
 
-    // 2. Input: Using nested loops to fill the table
-    printf("Enter elements for a 3x3 matrix:\n");
-    for (i = 0; i < 3; i++) {       // Outer loop for Rows
-        for (j = 0; j < 3; j++) {   // Inner loop for Columns
-            printf("Element [%d][%d]: ", i, j);
-            scanf("%d", &matrix[i][j]);
+    // Access specific element (Class 2, Student 1, Subject 2)
+    printf("Class 2, Student 1, Subject 2: %d\n", school[1][0][1]); // Output: 75
+
+    // Printing all elements using three nested loops
+    for (int i = 0; i < 2; i++) {
+        printf("Class %d:\n", i + 1);
+        for (int j = 0; j < 3; j++) {
+            for (int k = 0; k < 2; k++) {
+                printf("%d ", school[i][j][k]);
+            }
+            printf("\n");
         }
     }
-
-    // 3. Output: Printing the array in a grid format
-    printf("\nYour 3x3 Matrix looks like this:\n");
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
-            printf("%d\t", matrix[i][j]); // \t adds a tab space for alignment
-        }
-        printf("\n"); // Moves to the next line after finishing a row
-    }
-
     return 0;
 }
+
 
