@@ -11,7 +11,7 @@ Initialization: int marks[5] = {90, 85, 70, 95, 80};
 Accessing: printf("%d", marks[0]); // Outputs 90
 */
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main() {
     // Declare and initialize a 1D array
@@ -26,4 +26,31 @@ int main() {
     printf("Modified fifth element: %d\n", numbers[4]); // Output: 100
 
     return 0;
+} */
+// Example of sum of array using for loop:
+#include <stdio.h>
+
+int main() {
+    // 1. Declare an array of size 5
+    int numbers[5];
+    int sum = 0;
+
+    printf("Enter 5 integers:\n");
+
+    // 2. Input Loop: Store values into the array
+    for (int i = 0; i < 5; i++) {
+        printf("Enter number %d: ", i + 1);
+        scanf("%d", &numbers[i]); // Notice the & for the memory address
+    }
+
+    // 3. Processing Loop: Add each element to the sum
+    for (int i = 0; i < 5; i++) {
+        sum = sum + numbers[i];
+    }
+
+    // 4. Output the result
+    printf("\nThe sum of the array elements is: %d\n", sum);
+
+    return 0;
 }
+
