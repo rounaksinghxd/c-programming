@@ -14,9 +14,10 @@ hello with the void is the function name.
 
     printf("Hello\n");
 }
-int main() 
+int main() /* This is starting point of of our C Program. It means our Program start from main(), and when it sees hello();
+it goes to the hello() function, executes it, and comes back. */
 {
-    hello();
+    hello(); // We use this line of code to call the function.
     hello();
     hello();
     hello();
